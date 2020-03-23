@@ -1,5 +1,6 @@
 COMPONENT BASED APPROACH
 	trying to figure out different portions of a web-page that can separated out and can be created as a individual components
+	A component in Angular can be considered as a small application with an associated template. It has a selector and will (usually) render the template, whereever the selector-tag is located.
 	e.g.
 	Root
 		header
@@ -24,6 +25,10 @@ SETUP
 		ng serve                               // builds the project and start hosting the locally in default port(4200)
 
 	Some terms from the initialized project:
-		src directory : a placeholder for holding the source code for the project
-		app directory : a placeholder for angular components. contains the 'app-root' component
+		index.html    : default home page/teplate for the application
+		main.ts       : default typescript file to hold the client side logic for the project
+		style.css     : default style sheet for th project
 		package.json  : list the dependencies which the project is using
+		src           : a placeholder directory for holding the source code for the project
+		src/app       : a placeholder directory for holding angular components. contains the 'app-root' component
+		src/app/app.module.ts : also called root module, configures the project as an independent module. This AppModule is called by default from the main.ts
