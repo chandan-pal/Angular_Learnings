@@ -1,0 +1,15 @@
+import { Component, OnInit } from '@angular/core';                          //imports
+
+@Component({                                                                //annotation or also known as meta data (just like java annotations)
+  selector: 'app-hello-world',                                              //@Component marks/registers this type script class as an angular component
+  templateUrl: './hello-world.component.html',                              
+  styleUrls: ['./hello-world.component.css']
+})
+export class HelloWorldComponent implements OnInit {                        //class definition, export exposes the class to other modules
+                                                                            
+  constructor() { }                                                         //contructor of the class
+                                                                            
+  ngOnInit(): void {                                                        //class method
+  }                                                                         
+                                                                            
+}                                                                           
