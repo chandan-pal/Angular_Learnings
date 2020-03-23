@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';                          //im
   styleUrls: ['./hello-world.component.css']
 })
 export class HelloWorldComponent implements OnInit {                        //class definition, export exposes the class to other modules
-                                                                            
+  message : string  = "hello!"                                              //member variable of the class
   constructor() { }                                                         //contructor of the class
                                                                             
   ngOnInit(): void {                                                        //class method
