@@ -1,0 +1,29 @@
+COMPONENT BASED APPROACH
+	trying to figure out different portions of a web-page that can separated out and can be created as a individual components
+	e.g.
+	Root
+		header
+		side-bar
+			nav
+			updates
+		main-area
+			info-section
+			details-section
+		footer
+
+SETUP
+	pre-requisites:
+		Node.js (for front-end)
+		Angular CLI package:
+			Angular CLI is a tool to to initialize, develop, scaffold, and maintain Angular applications
+			to install angular cli package use command "npm install -g @angular/cli"
+	
+	Enter the project initialization commands
+		ng new my-first-project                // to initialize a new angular project with all required angular dependencies
+		cd my-first-project                    // move the project directory
+		ng serve                               // builds the project and start hosting the locally in default port(4200)
+
+	Some terms from the initialized project:
+		src directory : a placeholder for holding the source code for the project
+		app directory : a placeholder for angular components. contains the 'app-root' component
+		package.json  : list the dependencies which the project is using
