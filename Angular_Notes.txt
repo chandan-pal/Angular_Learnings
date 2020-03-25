@@ -70,6 +70,15 @@ passing input to component and retrieving the input
 passing member variable to components
 	<app-address-card [user]="userObj"></app-address-card>
 	[] in the name of the property calls to evaluate and value
+syntax for using click events
+	<button *ngIf="isCollapsed" (click)="toggleCollapse()">Expand</button>
+Two way data biinding
+	<input type="text" [(ngModel)]="inputText"/>
+	'ngModel' is a directive of @angular/forms. It creates a 'FormControl' instance from a domain model and binds it to a form control element.
+	[()] : commaly reffered to as banana in the box syntex
+	[] : indicates data flow from component to view
+	() : indicates data flow from view to component
+	[()] : indicates two way data flow
 
 
 COMPONENT LIFECYCLE SEQUENCE

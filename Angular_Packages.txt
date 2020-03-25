@@ -3,6 +3,7 @@
 @angular/common
 	
 @angular/forms
+	NgModule directive : Creates a FormControl instance from a domain model and binds it to a form control element.
 	
 @angular/platform-browser
 	Supports execution of Angular apps on different supported browsers.
