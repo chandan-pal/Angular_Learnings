@@ -27,9 +27,11 @@ MODULES:
 		3. imports: Other modules whose exported classes are needed by component templates declared in this NgModule.
 		4. providers: Creators of services that this NgModule contributes to the global collection of services; they become accessible in all parts of the app.
 		5. bootstrap: The main application view, called the root component, which hosts all other app views. Only the root NgModule should set the bootstrap property.
+	- command to create a new module 'ng generate module <nameOfModule>'
 COMPONENT:
 	- Components define views, which are sets of screen elements that Angular can choose among and modify according to your program logic and data.
 	- Components use services, which provide specific functionality not directly related to views. Service providers can be injected into components as dependencies, making your code modular, reusable, and efficient.
+	- command to create a new component 'ng generate component <nameOfComponent>'
 
 
 
