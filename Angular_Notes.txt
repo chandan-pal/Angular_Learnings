@@ -59,3 +59,5 @@ platformBrowserDynamic()  - creates a platform
 
 Syntax for using ngFor :
 	<div *ngFor="let phoneNumber of user.phone">{{ phoneNumber }}</div>
+Syntax for using ngIf :
+	<div *ngIf="user.phone.length > 0">
