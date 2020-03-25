@@ -56,3 +56,6 @@ SETUP
 
 
 platformBrowserDynamic()  - creates a platform
+
+Syntax for using ngFor :
+	<div *ngFor="let phoneNumber of user.phone">{{ phoneNumber }}</div>
