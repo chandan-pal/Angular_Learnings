@@ -12,6 +12,27 @@ COMPONENT BASED APPROACH
 			details-section
 		footer
 
+PLATFORM:
+	- The entry point for Angular on a web page. Each page has exactly one platform, and services (such as reflection) which are common to every Angular application running on the page are bound in its scope.
+	- There potentially can be many applications on one platform.
+MODULES:
+	- Angular apps are modular and Angular has its own modularity system called NgModules.
+	- NgModules are containers for a cohesive block of code dedicated to an application domain, a workflow, or a closely related set of capabilities.
+	- They can contain components, service providers, and other code files whose scope is defined by the containing NgModule.
+	- They can import functionality that is exported from other NgModules, and export selected functionality for use by other NgModules.
+	- Every Angular app has at least one NgModule class, the root module, which is conventionally named AppModule and resides in a file named app.module.ts
+	@NgModule annotation metadata
+		1. declarations: The components, directives, and pipes that belong to this NgModule.
+		2. exports: The subset of declarations that should be visible and usable in the component templates of other NgModules.
+		3. imports: Other modules whose exported classes are needed by component templates declared in this NgModule.
+		4. providers: Creators of services that this NgModule contributes to the global collection of services; they become accessible in all parts of the app.
+		5. bootstrap: The main application view, called the root component, which hosts all other app views. Only the root NgModule should set the bootstrap property.
+COMPONENT:
+	- Components define views, which are sets of screen elements that Angular can choose among and modify according to your program logic and data.
+	- Components use services, which provide specific functionality not directly related to views. Service providers can be injected into components as dependencies, making your code modular, reusable, and efficient.
+
+
+
 SETUP
 	pre-requisites:
 		Node.js (for front-end)
@@ -32,3 +53,6 @@ SETUP
 		src           : a placeholder directory for holding the source code for the project
 		src/app       : a placeholder directory for holding angular components. contains the 'app-root' component
 		src/app/app.module.ts : also called root module, configures the project as an independent module. This AppModule is called by default from the main.ts
+
+
+platformBrowserDynamic()  - creates a platform

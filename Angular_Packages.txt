@@ -5,6 +5,7 @@
 @angular/forms
 	
 @angular/platform-browser
+	Supports execution of Angular apps on different supported browsers.
 @angular/platform-browser-dynamic
 @angular/animations
 @angular/router
