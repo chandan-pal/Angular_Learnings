@@ -97,3 +97,10 @@ COMPONENT LIFECYCLE SEQUENCE
 	8. ngOnDestroy()	
 		Cleanup just before Angular destroys the directive/component. Unsubscribe Observables and detach event handlers to avoid memory leaks.
 		Called just before Angular destroys the directive/component.
+
+
+Styling in Angular:
+	Angular handles styling elegantly by not allowing the styles defined in one component to interfere with styles defined in other conponent of the same page.
+	Angular does this internally by adding a selector to each element in the component.
+	Angular adds this selector also on each style for that component.
+	for global styles, we can use style.css file
