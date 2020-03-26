@@ -91,15 +91,15 @@ Two way data biinding
 creating a service:
 	'ng generate service <nameOfService>'
 registering a service in a module
-	an angular service needs to be registered in an angular module in the 'providers' section to be able to be used by different components in the module.
+	an angular service needs to be registered in an angular module in the 'providers' section to be able to be used by different components in any module.
 	e.g DateService below
 	@NgModule({
 	  declarations: [AppComponent, AddressCardComponent],
 	  imports: [BrowserModule, FormsModule, AppRoutingModule, ViewModule],
-	  providers: [DateService],
+	  providers: [DateService],              --------------------------- this makes the service available globally to be used by any component
 	  bootstrap: [AppComponent]
 	})
-using a service in a component of the same module:
+using a service in a component of any module:
 	for using the service in compnent TS class, we need to import the service
 	import { Component, OnInit } from '@angular/core';
 	import { DateService } from '../date.service'    --------------- to satisfy the typescript compilation
