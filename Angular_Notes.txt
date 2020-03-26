@@ -88,6 +88,36 @@ Two way data biinding
 	[] : indicates data flow from component to view
 	() : indicates data flow from view to component
 	[()] : indicates two way data flow
+creating a service:
+	'ng generate service <nameOfService>'
+registering a service in a module
+	an angular service needs to be registered in an angular module in the 'providers' section to be able to be used by different components in the module.
+	e.g DateService below
+	@NgModule({
+	  declarations: [AppComponent, AddressCardComponent],
+	  imports: [BrowserModule, FormsModule, AppRoutingModule, ViewModule],
+	  providers: [DateService],
+	  bootstrap: [AppComponent]
+	})
+using a service in a component of the same module:
+	for using the service in compnent TS class, we need to import the service
+	import { Component, OnInit } from '@angular/core';
+	import { DateService } from '../date.service'    --------------- to satisfy the typescript compilation
+	@Component({
+	  selector: 'app-date',
+	  templateUrl: './date.component.html',
+	  styleUrls: ['./date.component.css']
+	})
+	export class DateComponent implements OnInit {
+	  message : string = "New date message!"
+	  date : string = new Date().toDateString();
+	  constructor(private dateService: DateService) { ------------- to ask angular to inject the service
+		setInterval(() => {
+		  this.date = dateService.getCurrentDate();
+		}, 1000);
+	   }
+	}
+
 
 
 COMPONENT LIFECYCLE SEQUENCE
