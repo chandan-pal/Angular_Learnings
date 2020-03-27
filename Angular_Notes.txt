@@ -118,7 +118,12 @@ using a service in a component of any module:
 	   }
 	}
 
-
+Making REST calls:
+	'HttpClientModule' module (a module provided by agular for httpclient services)
+	import this module to use the angular HttpClient features
+	
+	import { HttpClientModule } from '@angular/common/http'; ------- to satisfy the typescript
+	also add in import section of the NgModule metadata.
 
 COMPONENT LIFECYCLE SEQUENCE
 	1. ngOnChanges()	
