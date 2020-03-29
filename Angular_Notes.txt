@@ -157,3 +157,9 @@ Styling in Angular:
 	Angular does this internally by adding a selector to each element in the component.
 	Angular adds this selector also on each style for that component.
 	for global styles, we can use style.css file
+
+Building angular Application:
+	command 'ng build'
+	compiles and builds an angular application, generates a build folder which be hosted as an stand-alone application on any server.
+	for enabling production mode:
+	ng build --prod (prod mode does all the optimization required for an efficient and performant application including AOT(Ahead Of Time) compilation)
