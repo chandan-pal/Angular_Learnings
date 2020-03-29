@@ -163,3 +163,37 @@ Building angular Application:
 	compiles and builds an angular application, generates a build folder which be hosted as an stand-alone application on any server.
 	for enabling production mode:
 	ng build --prod (prod mode does all the optimization required for an efficient and performant application including AOT(Ahead Of Time) compilation)
+
+
+ANGULAR ROUTING:
+	URL based routing
+		different urls / entry points for different views
+	component based routing
+		a tree of components
+		i.e. for a view, there is a root component, which then loads up the other components hence forming a components tree to build up a particular voew.
+		
+	command to create a new angular project with routing 'ng new <projectName> --routing
+	
+	Steps to configure routing in angular
+		1. Define route urls
+		2. create angular components for each view (one for each route)
+		3. map route urls with components (configuring the routing module)
+			e.g.
+			import { NgModule } from '@angular/core';
+			import { Routes, RouterModule } from '@angular/router';
+
+			import { RestappComponent } from './restapp/restapp.component';
+			import { DateComponent } from './date/date.component';
+			import { AppComponent } from './app.component';
+
+			const routes: Routes = [
+			  {path: "dateapp", component: DateComponent},
+			  {path: "date", redirectTo: "/dateapp", pathMatch: "prefix"},
+			  {path: "githubapp", component: RestappComponent}
+			];
+
+			@NgModule({
+			  imports: [RouterModule.forRoot(routes)],
+			  exports: [RouterModule]
+			})
+			export class AppRoutingModule { }
