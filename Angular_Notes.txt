@@ -32,6 +32,30 @@ COMPONENT:
 	- Components define views, which are sets of screen elements that Angular can choose among and modify according to your program logic and data.
 	- Components use services, which provide specific functionality not directly related to views. Service providers can be injected into components as dependencies, making your code modular, reusable, and efficient.
 	- command to create a new component 'ng generate component <nameOfComponent>'
+DIRECTIVE:
+	- in angular, a component is actually a directive with a template.
+	- directives provide a functionality and can transform the dom.
+	- directives do not have a template
+	- they are something which can be created with an intent of applying them to the existing dom elements or template elements, to change that element in some way.
+	there are two types of directives
+		1. Structural
+			modify layout (by altering elements in the dom)
+		2. Attribute
+			change the behaviour of appearance of an existing dom element.
+	- like a component, a directive gets configured with a selector that angular will use to find a match and apply the directive
+		e.g
+		@Directive({
+			selector: 'myFav'
+		})
+		to apply the directive, we can add attribute on an element that matches the selector
+		e.g <div myFav><img src="fav.png" /></div>
+		or we can use the template syntax to add a directive in an assignment statement
+		e.g <div [myFav]="true"><img src="myImage.png" /></div>
+	- angular comes with a number of directives out of the box, to handle common web constrcuts, like, ngIf, ngFor, routerLink etc.
+PIPE:
+	a tool to display content
+	a pipe takes in a data and runs some logic to transform it to new output.
+	angular comes with some common OOTB pipes like dates, upper case and lower case.
 SERVICE:
 	- part of a module
 	- no view
