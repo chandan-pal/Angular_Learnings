@@ -63,7 +63,14 @@ SERVICE:
 	- services contain methods / functionalities which can kbe re-used across multiple components
 	- command to create a new service 'ng generate service <nameOfService>'
 	- unlike components, services are registered in providers of a module, instead of declarations
-
+Dependency Injection
+	concept of IoC (Inversion of Control)
+	provide module to other modules that needs it, instead of other modules creating the dependency of the required module on their own.
+	- it allows to write de-coupled code that is easier to unit test and to work with.
+	- the common place to use DI is in class constructors (constrcutors for components, directives, pipes, services)
+	- declare types in constructor parameters and angular will interpret that and make sure to add instance for that type
+	- DI can also be used through component metadata, properties for directives and providers
+	- DI can also be used at bootstrap phase
 
 
 SETUP
