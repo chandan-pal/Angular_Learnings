@@ -52,17 +52,20 @@ DIRECTIVE:
 		or we can use the template syntax to add a directive in an assignment statement
 		e.g <div [myFav]="true"><img src="myImage.png" /></div>
 	- angular comes with a number of directives out of the box, to handle common web constrcuts, like, ngIf, ngFor, routerLink etc.
+	
 PIPE:
 	a tool to display content
 	a pipe takes in a data and runs some logic to transform it to new output.
 	angular comes with some common OOTB pipes like dates, upper case and lower case.
+	
 SERVICE:
 	- part of a module
 	- no view
 	- services are also TS classes like components
-	- services contain methods / functionalities which can kbe re-used across multiple components
+	- services contain methods / functionalities which can be re-used across multiple components
 	- command to create a new service 'ng generate service <nameOfService>'
 	- unlike components, services are registered in providers of a module, instead of declarations
+	
 Dependency Injection
 	concept of IoC (Inversion of Control)
 	provide module to other modules that needs it, instead of other modules creating the dependency of the required module on their own.
